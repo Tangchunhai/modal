@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>弹窗</title>
+    <link rel="stylesheet" href="css/modal.css">
+</head>
+<body>
+    <input type="button" onclick="opens()" value="弹窗" />
+    <button>取消</button>
+	
+	<div id="js-modal" class="modal">
+		<div class="modal-dialog">
+			<div class="modal-header">
+				<h1>标题</h1>
+				<button type="button" class="close" data-close="modal">&times;</button>
+			</div>
+			<div class="modal-content" style="height: 400px;">
+				内容随便写
+			</div>
+			<div class="modal-foot">
+				<button class="btn btn-default" onclick="closes()">取消</button>
+				<button class="btn btn-primary" style="margin-left: 5px;" onclick="open2()">确定</button>
+			</div>
+		</div>
+	</div>
+
+	<div id="js-modal2" class="modal" data-backdropClose="static">
+		<div class="modal-dialog">
+			<div class="modal-header">
+				<h1>标题</h1>
+				<button type="button" class="close" data-close="modal">&times;</button>
+			</div>
+			<div class="modal-content" style="height: 300px;">
+				内容随便写
+			</div>
+			<div class="modal-foot">
+				<button class="btn btn-default" data-close="modal">取消</button>
+				<button class="btn btn-primary" style="margin-left: 5px;" onclick="open3()">确定</button>
+			</div>
+		</div>
+	</div>
+
+	<div id="js-modal3" class="modal">
+		<div class="modal-dialog modal-dms">
+			<div class="modal-header">
+				<h1>标题</h1>
+				<button type="button" class="close" data-close="modal">&times;</button>
+			</div>
+			<div class="modal-content" style="height: 200px;">
+				内容随便写
+			</div>
+			<div class="modal-foot">
+				<button class="btn btn-default" data-close="modal">取消</button>
+			</div>
+		</div>
+	</div>
+	
+    <script src="js/modal.js"></script>
+    
+    <script>
+    	function opens() {
+    		modal.init({
+    			el: 'js-modal',
+    			open: 'show',
+    			fixed: false,
+    			animation: 'up',
+    			backdropClose: false
+    		});
+    	}
+
+    	function open2() {
+    		modal.init({
+    			el: 'js-modal2',
+    			open: 'show',
+    			fixed: false
+    		});
+    	}
+
+    	function open3() {
+    		modal.init({
+    			el: 'js-modal3',
+    			open: 'show',
+    			animation: 'soak'
+    		});
+    	}
+    	
+    	function closes() {
+    		modal.init({
+    			el: 'js-modal',
+    			open: 'hide'
+    		});
+    	}
+    	function closes2() {
+    		modal.init({
+    			el: 'js-modal2',
+    			open: 'hide'
+    		});
+    	}
+    	function closes3() {
+    		modal.init({
+    			el: 'js-modal3',
+    			open: 'hide'
+    		});
+    	}    	
+    </script>
+</body>
+</html>

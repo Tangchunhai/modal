@@ -1,0 +1,272 @@
+/* 公共样式 */
+* {
+	padding: 0;
+	margin: 0;
+}
+body {
+	height: 1000px;
+	font-size: 12px;
+	color: #000000;
+}
+a {
+	color: #000000;
+}
+h1 {
+	color: #000000;
+}
+div {  
+	word-wrap: break-word; 
+	word-break: normal;  
+}
+
+/* 弹窗 */
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 9996;
+	display: none;
+    outline: 0;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-duration: .3s;
+	animation-duration: .3s;    
+} 
+.modal.up {
+	animation: up .3s infinite;
+	-webkit-animation: up .3s infinite;
+	animation-iteration-count: 1;
+	-webkit-animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+}
+.modal.up-close {
+	animation: up-in .3s infinite;
+	-webkit-animation: up-in .3s infinite;
+	animation-iteration-count: 1;
+	-webkit-animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+}
+.modal.soak {
+	-webkit-animation-name: soak;
+	animation-name: soak;	
+}
+.soak-close {
+	-webkit-animation-name: soak-in;
+	animation-name: soak-in;
+	-webkit-animation-duration: .2s;
+	animation-duration: .2s;
+}
+.modal-dialog {
+	border: 1px solid #000000;
+	background: #ffffff;
+	border-radius: 6px;
+	box-shadow: 1px 1px 5px 5px #505050;
+	position: absolute;
+	z-index: 9999;
+	top: 40px;
+	left:0;
+	right: 0;
+	margin: auto;
+}
+.modal-header {
+	padding: 0 15px;
+	height: 56px;
+	line-height: 56px;
+	border-bottom: 1px solid #E5E5E5;
+}
+.modal-header h1 {
+	float: left;
+	font-size: 16px;
+}
+.modal-header > .close {
+	float: right;
+	cursor: pointer;
+	font-size: 21px;
+    font-weight: 700;
+    line-height: 56px;
+    color: #DCDCDC;
+    text-shadow: 0 1px 0 #fff;
+    background: none;
+    border: none;
+    outline:none;
+}
+.modal-header > .close:hover {
+	color: #000;
+}
+.modal-content {
+	margin: 15px;
+}
+.modal-foot {
+	text-align: right;
+	padding: 15px;
+	border-top: 1px solid #E5E5E5;
+}
+.modal-mask {
+	background: #000000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;	
+	z-index: 9993;
+    opacity: .3;
+    filter: alpha(opacity = 30);
+}
+/* 弹窗-按钮 */
+.btn {
+	display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;	
+}
+
+.btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+
+/* 根据浏览器改变弹窗默认设置宽度 */
+@media (min-width: 768px) {
+    .modal-dialog {
+        width: 600px;
+    }
+    .modal-sm {
+        width: 300px;
+    }
+}
+
+@media (min-width: 992px) {
+    .modal-lg {
+        width: 900px;
+    }
+}
+
+/* 弹窗从小到大出现动画 */
+@keyframes soak {
+	0% {
+		opacity: 0;
+		top: 40;
+		-webkit-transform: scale(.5);
+		-ms-transform: scale(.5);
+		transform: scale(.5);
+	}
+	100% {
+		opacity: 1;
+		top: 40;
+		-webkit-transform: scale(1);
+		-ms-transform: scale(1);
+		transform: scale(1);
+	}
+}
+@-webkit-keyframes soak {
+	0% {
+		opacity: 0;
+		-webkit-transform: scale(.5);
+		transform: scale(.5);
+	}
+	100% {
+		top: 40;
+		opacity: 1;
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
+/* 弹窗从大到小关闭动画 */
+@-webkit-keyframes soak-close {
+    100% {
+  		opacity: .3;
+  		-webkit-transform: scale(.7);
+  		transform: scale(.7);
+    }
+  	30% {
+	  	-webkit-transform: scale(1.05);
+	  	transform: scale(1.05);
+  	}
+    0% {
+	  	-webkit-transform: scale(1);
+	  	transform: scale(1);
+  	}
+}
+@keyframes soak-close {
+    100% {
+	  	opacity: 0;
+	  	-webkit-transform: scale(.7);
+	  	-ms-transform: scale(.7);
+	  	transform: scale(.7);
+    }
+    30% {
+	  	-webkit-transform: scale(1.05);
+	  	-ms-transform: scale(1.05);
+	  	transform: scale(1.05);
+    }
+    0% {
+	  	-webkit-transform: scale(1);
+	  	-ms-transform: scale(1);
+	  	transform: scale(1);
+    }
+}
+
+
+/* 弹窗上到下出现动画 */
+@keyframes up {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+		top: 40px;
+	}
+}
+@-webkit-keyframes up {
+	100% {
+		top: 40px;
+	}	
+}
+
+/* 弹窗下到上关闭动画 */
+@keyframes up-close {
+	100% {
+		opacity: 0;
+		top: -20px;
+	}
+	0% {
+		opacity: 1;
+		top: -40px;
+	}
+}
+@-webkit-keyframes up-close {
+	100% {
+		opacity: 0;
+		top: -20px;
+	}
+	0% {
+		opacity: 1;
+		top: -40px;
+	}	
+}
