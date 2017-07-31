@@ -49,7 +49,7 @@ modal.init({
 
 ```html
 <div id="js-modal" class="modal up" data-backClose="static">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-sm">
         <div class="modal-header">
             <h1>标题2</h1>
             <button type="button" class="close" data-close="modal">&times;</button>
