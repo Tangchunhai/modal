@@ -43,8 +43,8 @@ div {
 	-webkit-animation-fill-mode: forwards;
 }
 .modal.up-close {
-	animation: up-in .3s infinite;
-	-webkit-animation: up-in .3s infinite;
+	animation: up-close .3s infinite;
+	-webkit-animation: up-close .3s infinite;
 	animation-iteration-count: 1;
 	-webkit-animation-iteration-count: 1;
 	animation-fill-mode: forwards;
@@ -54,13 +54,14 @@ div {
 	-webkit-animation-name: soak;
 	animation-name: soak;	
 }
-.soak-close {
-	-webkit-animation-name: soak-in;
-	animation-name: soak-in;
-	-webkit-animation-duration: .2s;
-	animation-duration: .2s;
+.modal.soak-close {
+	-webkit-animation-name: soak-close;
+	animation-name: soak-close;
+	-webkit-animation-duration: .3s;
+	animation-duration: .3s;
 }
 .modal-dialog {
+	width: 600px;
 	border: 1px solid #000000;
 	background: #ffffff;
 	border-radius: 6px;
@@ -71,6 +72,12 @@ div {
 	left:0;
 	right: 0;
 	margin: auto;
+}
+.modal-sm {
+	width: 300px;
+}
+.modal-lm {
+	width: 900px;
 }
 .modal-header {
 	padding: 0 15px;
@@ -198,21 +205,6 @@ div {
 	}
 }
 /* 弹窗从大到小关闭动画 */
-@-webkit-keyframes soak-close {
-    100% {
-  		opacity: .3;
-  		-webkit-transform: scale(.7);
-  		transform: scale(.7);
-    }
-  	30% {
-	  	-webkit-transform: scale(1.05);
-	  	transform: scale(1.05);
-  	}
-    0% {
-	  	-webkit-transform: scale(1);
-	  	transform: scale(1);
-  	}
-}
 @keyframes soak-close {
     100% {
 	  	opacity: 0;
@@ -231,9 +223,23 @@ div {
 	  	transform: scale(1);
     }
 }
+@-webkit-keyframes soak-close {
+    100% {
+  		opacity: .3;
+  		-webkit-transform: scale(.7);
+  		transform: scale(.7);
+    }
+  	30% {
+	  	-webkit-transform: scale(1.05);
+	  	transform: scale(1.05);
+  	}
+    0% {
+	  	-webkit-transform: scale(1);
+	  	transform: scale(1);
+  	}
+}
 
-
-/* 弹窗上到下出现动画 */
+/* 弹窗从上到下出现动画 */
 @keyframes up {
 	0% {
 		opacity: 0;
@@ -249,7 +255,7 @@ div {
 	}	
 }
 
-/* 弹窗下到上关闭动画 */
+/* 弹窗从下到上关闭动画 */
 @keyframes up-close {
 	100% {
 		opacity: 0;
