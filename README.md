@@ -37,13 +37,13 @@ modal.init({
 
 ```
 
-| 参数        | 说明           |
-| ------------- |:-------------:|
-| el  | 挂载值，必须是标签元素的#id |
-| open      | show-开打弹窗，hide关闭弹窗 |
-| fixed |     true-不会随着滚动条而移动，false-随着滚动条移动  |
-| animation | up-弹窗从上到下出现动画，soak-弹窗从小到大出现动画，默认为up  |
-| backdropClose |     true-开启背景关闭，false-关闭背景关闭，默认为true  |
+| 参数          | 说明           | 类型           | 可选值           | 默认值           |
+| ------------- |:-------------:|:-------------:|:-------------:|:-------------:|
+| el            | 挂载元素ID     | string        | 必须是元素ID   | ---           |
+| open          | 打开或关闭弹窗  | string        | show、hide   | ---           |
+| fixed         | 弹窗随滚动条而上下移动  | boolean        | true、false   | false           |
+| animation     | 弹窗打开动画，up-弹窗从上到下出现动画，soak-弹窗从小到大出现动画  | string        | up、soak   | up          |
+| backdropClose | 背景关闭  | boolean        | true、false   | true          |
 
 ```html
       
