@@ -64,11 +64,10 @@
     				} else {
     					this.animation = 'none';
     				}
-    			}
-    			
-    			document.querySelector(this.el).setAttribute('data-animation', this.animation);
+    			}   			
     		}
-			
+    		
+			document.querySelector(this.el).setAttribute('data-animation', this.animation);
     		this.animationClose = 'close';
     		this.animationClose = this.animation + '-' + this.animationClose;
     		this.fixed = option.fixed === undefined ? this.fixed : option.fixed;
@@ -242,7 +241,7 @@
 			
 			//根据弹窗动画设置关闭等待时间
 			var animation = document.querySelector(el).getAttribute('data-animation');
-			
+
 			if (animation === 'none') {
 				var time = 0;
 			} else if (animation === 'up') {

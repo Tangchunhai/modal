@@ -4,39 +4,65 @@
     <meta charset="utf-8">
     <title>弹窗</title>
     <link rel="stylesheet" href="css/modal.css">
+    
+    <style>
+    	body {
+    		background: #2ECC82;
+    	}
+    	.box {
+    		padding-top: 100px;
+    		text-align: center;
+    	}
+    	.box h1 {
+    		color: #ffffff;
+    		font-size: 60px;
+    		font-weight: 100px;
+    		margin-bottom: 30px;
+    	}
+		.btn-red {
+		    color: #fff;
+		    background-color: #CF4646;
+		    border-color: #CF4646;
+		}    	
+    </style>
 </head>
 <body>
-    <input type="button" onclick="opens()" value="弹窗" />
-    <button>取消</button>
+    <div class="box">
+    	<h1>modal，一个简单的弹窗插件</h1>
+    	<button class="btn btn-red" onclick="open1()">示例1</button>
+    	<button class="btn btn-red" onclick="open2()" style="margin-left: 10px;">示例2</button>
+    	<button class="btn btn-red" onclick="open3()" style="margin-left: 10px;">示例3</button>
+    	<button class="btn btn-red" onclick="url()" style="margin-left: 10px;">github下载</button>
+    </div>
 	
-	<div id="js-modal" class="modal">
+	<div id="js-modal1" class="modal">
 		<div class="modal-dialog">
 			<div class="modal-header">
-				<h1>标题</h1>
+				<h1>示例1</h1>
 				<button type="button" class="close" data-close="modal">&times;</button>
 			</div>
 			<div class="modal-content" style="height: 400px;">
 				内容随便写
 			</div>
 			<div class="modal-foot">
-				<button class="btn btn-default" onclick="closes()">取消</button>
-				<button class="btn btn-primary" style="margin-left: 5px;" onclick="open2()">确定</button>
+				<button class="btn btn-default" data-close="modal">取消</button>
+				<button class="btn btn-primary" style="margin-left: 5px;">确定</button>
 			</div>
 		</div>
 	</div>
 
-	<div id="js-modal2" class="modal" data-backdropClose="static">
+	<div id="js-modal2" class="modal">
 		<div class="modal-dialog">
 			<div class="modal-header">
-				<h1>标题</h1>
+				<h1>示例2</h1>
 				<button type="button" class="close" data-close="modal">&times;</button>
 			</div>
-			<div class="modal-content" style="height: 300px;">
+			<div class="modal-content" style="height: 400px;">
 				内容随便写
 			</div>
 			<div class="modal-foot">
 				<button class="btn btn-default" data-close="modal">取消</button>
-				<button class="btn btn-primary" style="margin-left: 5px;" onclick="open3()">确定</button>
+				<button class="btn btn-primary" style="margin-left: 5px;">确定</button>
 			</div>
 		</div>
 	</div>
@@ -44,10 +70,10 @@
 	<div id="js-modal3" class="modal">
 		<div class="modal-dialog modal-dms">
 			<div class="modal-header">
-				<h1>标题</h1>
+				<h1>示例3</h1>
 				<button type="button" class="close" data-close="modal">&times;</button>
 			</div>
-			<div class="modal-content" style="height: 200px;">
+			<div class="modal-content" style="height: 400px;">
 				内容随便写
 			</div>
 			<div class="modal-foot">
@@ -59,50 +85,32 @@
     <script src="js/modal.js"></script>
     
     <script>
-    	function opens() {
+    	function open1() {
     		modal.init({
-    			el: 'js-modal',
-    			open: 'show',
-    			fixed: false,
-    			animation: 'up',
-    			backdropClose: false
+    			el: '#js-modal1',
+    			open: 'show'
     		});
     	}
 
     	function open2() {
     		modal.init({
-    			el: 'js-modal2',
+    			el: '#js-modal2',
     			open: 'show',
-    			fixed: false
+    			animation: 'up'
     		});
     	}
 
     	function open3() {
     		modal.init({
-    			el: 'js-modal3',
+    			el: '#js-modal3',
     			open: 'show',
     			animation: 'soak'
     		});
     	}
     	
-    	function closes() {
-    		modal.init({
-    			el: 'js-modal',
-    			open: 'hide'
-    		});
+    	function url() {
+    		location.href = "https://github.com/Tanghailun/modal"
     	}
-    	function closes2() {
-    		modal.init({
-    			el: 'js-modal2',
-    			open: 'hide'
-    		});
-    	}
-    	function closes3() {
-    		modal.init({
-    			el: 'js-modal3',
-    			open: 'hide'
-    		});
-    	}    	
     </script>
 </body>
 </html>
