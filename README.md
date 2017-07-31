@@ -37,11 +37,13 @@ modal.init({
 
 ```
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| 参数        | 说明           |
+| ------------- |:-------------:|
+| el  | 挂载值，必须是标签元素的#id |
+| open      | show-开打弹窗，hide关闭弹窗 |
+| fixed |     true-不会随着滚动条而移动，false-随着滚动条移动  |
+| animation | up-弹窗从上到下出现动画，soak-弹窗从小到大出现动画，默认为up  |
+| backdropClose |     true-开启背景关闭，false-关闭背景关闭，默认为true  |
 
 ```html
       
