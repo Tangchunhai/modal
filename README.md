@@ -25,15 +25,26 @@
 ``` js
 //打开弹窗
 modal.init({
-    el: 'js-modal', //挂载值，可以是标签元素的#id,也可以是.class
+    el: '#js-modal', //挂载值，必须是标签元素的#id
     open: 'show' //show为打开
 });
 
 //关闭弹窗
 modal.init({
-    el: 'js-modal', //挂载值，可以是标签元素的#id,也可以是.class
+    el: '#js-modal', //挂载值，必须是标签元素的#id
     open: 'hide' //hide为关闭
 });
+
+| 水果        | 价格    
+| --------   | -----:
+| 香蕉        | $1      
+| 苹果        | $1      
+| 草莓        | $1      
+
+作者：yacogo
+链接：http://www.jianshu.com/p/abaff828100d
+來源：简书
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 ```
 ```html
       
