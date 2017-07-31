@@ -39,7 +39,7 @@ modal.init({
 
 | 参数          | 说明 | 类型 | 可选值 | 默认值 |
 |:------------- |:--------------|:---------------|:--------------------------|:--|
-| el            | 挂载元素ID     | string        | 必须是元素ID   | --------|
+| el            | 挂载元素ID     | string        | 必须是元素ID   | ---|
 | open          | 打开或关闭弹窗  | string        | show、hide | ---|
 | fixed         | 弹窗随滚动条而上下移动  | boolean| true、false | false      |
 | animation     | up-弹窗从上到下出现动画，soak-弹窗从小到大出现动画| string        | up、soak   | up |
