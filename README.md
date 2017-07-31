@@ -64,6 +64,6 @@ modal.init({
 ```
 | 属性          | 说明 | 类型 | 可选值 | 默认值 |
 |:------------- |:--------------|:---------------|:--------------------------|:--|
-| class | up-弹窗从上到下出现动画，soak-弹窗从小到大出现动画 | string        | up、soak | class="modal"|
+| class | up-弹窗从上到下出现动画，soak-弹窗从小到大出现动画 | string        | up、soak | --- |
 | data-backClose | 禁止背景关闭弹窗     | string        | 必须是static   | ---|
 | data-close          | 关闭弹窗  | string        | 必须是modal | ---|
