@@ -21,30 +21,20 @@
         modal.js //modal脚本
 ```
 # 使用说明
+### 通过js来打开弹窗设置
+``` js
+//打开弹窗
+modal.init({
+    el: 'js-modal', //挂载值，可以是标签元素的#id,也可以是.class
+    open: 'show' //show为打开
+});
+
+//关闭弹窗
+modal.init({
+    el: 'js-modal', //挂载值，可以是标签元素的#id,也可以是.class
+    open: 'hide' //hide为关闭
+});
+```
 ```html
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>弹窗</title>
-    <link rel="stylesheet" href="css/modal.css">
-</head>
-<body>	
-        <div id="js-modal" class="modal">
-                <div class="modal-dialog">
-                        <div class="modal-header">
-                                <h1>标题</h1>
-                                <button type="button" class="close" data-close="modal">&times;</button>
-                        </div>
-                        <div class="modal-content" style="height: 400px;">
-                                内容随便写
-                        </div>
-                        <div class="modal-foot">
-                                <button class="btn btn-default" onclick="closes()">取消</button>
-                                <button class="btn btn-primary" style="margin-left: 5px;" onclick="open2()">确定</button>
-                        </div>
-                </div>
-        </div>
-<body>
-</html>        
+      
 ```
