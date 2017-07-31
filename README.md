@@ -43,10 +43,10 @@ modal.init({
 | open          | 打开或关闭弹窗  | string        | show、hide | ---|
 | fixed         | 弹窗随滚动条而上下移动  | boolean| true、false | false      |
 | animation     | up-弹窗从上到下出现动画，soak-弹窗从小到大出现动画| string        | up、soak、none   | none |
-| backdropClose | 背景关闭  | boolean        | true、false   | true      |
+| backClose | 背景关闭  | boolean        | true、false   | true      |
 
 ```html
-<div id="js-modal2" class="modal up" data-backdropClose="static">
+<div id="js-modal2" class="modal up" data-backClose="static">
     <div class="modal-dialog">
         <div class="modal-header">
             <h1>标题2</h1>
@@ -57,7 +57,7 @@ modal.init({
         </div>
         <div class="modal-foot">
             <button class="btn btn-default" data-close="modal">取消</button>
-            <button class="btn btn-primary" style="margin-left: 5px;" onclick="open3()">确定</button>
+            <button class="btn btn-primary">确定</button>
        </div>
     </div>
 </div>      
@@ -65,5 +65,5 @@ modal.init({
 | 属性          | 说明 | 类型 | 可选值 | 默认值 |
 |:------------- |:--------------|:---------------|:--------------------------|:--|
 | class | up-弹窗从上到下出现动画，soak-弹窗从小到大出现动画 | string        | up、soak | class="modal"|
-| data-backdropClose | 禁止背景关闭弹窗     | string        | 必须是static   | ---|
+| data-backClose | 禁止背景关闭弹窗     | string        | 必须是static   | ---|
 | data-close          | 关闭弹窗  | string        | 必须是modal | ---|
