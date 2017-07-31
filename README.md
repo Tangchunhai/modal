@@ -41,7 +41,7 @@ modal.init({
 |:------------- |:--------------|:---------------|:-----------------|:-----------------|
 | el            | 挂载元素ID     | string        | 必须是元素ID   | ---      |
 | open          | 打开或关闭弹窗  | string        | show、hide   | ---|
-| fixed         | 弹窗随滚动条而上下移动  | boolean| true、false   | false|
+| fixed         | 弹窗随滚动条而上下移动  | boolean| true、false   | false      |
 | animation     | 弹窗动画，up-弹窗从上到下出现动画，soak-弹窗从小到大出现动画  | string        | up、soak   | up|
 | backdropClose | 背景关闭  | boolean        | true、false   | true|
 
