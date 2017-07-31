@@ -37,14 +37,33 @@ modal.init({
 
 ```
 
-| 参数          | 说明 | 类型 | 可选值 | 默认值 |
+| 属性          | 说明 | 类型 | 可选值 | 默认值 |
 |:------------- |:--------------|:---------------|:--------------------------|:--|
 | el            | 挂载元素ID     | string        | 必须是元素ID   | ---|
 | open          | 打开或关闭弹窗  | string        | show、hide | ---|
 | fixed         | 弹窗随滚动条而上下移动  | boolean| true、false | false      |
-| animation     | up-弹窗从上到下出现动画，soak-弹窗从小到大出现动画| string        | up、soak   | up |
+| animation     | up-弹窗从上到下出现动画，soak-弹窗从小到大出现动画| string        | up、soak、none   | none |
 | backdropClose | 背景关闭  | boolean        | true、false   | true      |
 
 ```html
-      
+<div id="js-modal2" class="modal up" data-backdropClose="static">
+    <div class="modal-dialog">
+        <div class="modal-header">
+            <h1>标题2</h1>
+            <button type="button" class="close" data-close="modal">&times;</button>
+        </div>
+        <div class="modal-content" style="height: 300px;">
+            内容随便写
+        </div>
+        <div class="modal-foot">
+            <button class="btn btn-default" data-close="modal">取消</button>
+            <button class="btn btn-primary" style="margin-left: 5px;" onclick="open3()">确定</button>
+       </div>
+    </div>
+</div>      
 ```
+| 属性          | 说明 | 类型 | 可选值 | 默认值 |
+|:------------- |:--------------|:---------------|:--------------------------|:--|
+| class | up-弹窗从上到下出现动画，soak-弹窗从小到大出现动画 | string        | up、soak | class="modal"|
+| data-backdropClose | 禁止背景关闭弹窗     | string        | 必须是static   | ---|
+| data-close          | 关闭弹窗  | string        | 必须是modal | ---|
