@@ -4,21 +4,21 @@
 ## 功能特性
 <p>1.支持标签属性关闭弹窗。</p>
 <p>2.支持点击弹窗区域外背景关闭弹窗。</p>
-<p>3.支持两种打开弹窗动画效果，也可以禁止动画效果。</p>
+<p>3.支持两种打开弹窗动画效果。</p>
 <p>4.支持ESC快捷键关闭弹窗。</p>
 <p>5.支持打开多个弹窗。</p>
 
 ## 目录结构
 
 ```
-│ //跟目录
+│ //根目录
 │  modal.html //示例文件
 │  
 ├─css //样式目录
-│      modal.css //modal样式
+│      modal.css
 │      
 └─js //js目录
-        modal.js //modal脚本
+        modal.js
 ```
 ## 使用说明
 ### js示例
@@ -48,7 +48,7 @@ modal.init({
 ### html示例
 
 ```html
-<div id="js-modal2" class="modal up" data-backClose="static">
+<div id="js-modal" class="modal up" data-backClose="static">
     <div class="modal-dialog">
         <div class="modal-header">
             <h1>标题2</h1>
